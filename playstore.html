@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Play-Store</title>
+	<style>
+		.container{
+			width: 99vw;
+			height: 130vh;
+			background-color: lightgray;
+		}
+		.googleplay-row{
+			display: flex;
+		}
+		.googleplay-img img{
+			margin-top: 1vh;
+			margin-left: 1vw;
+			width: 8vw;
+			height: 5vh;
+		}
+		.search-box{
+			width: 40vw;
+			height: 4vh;
+			background-color: white;
+			margin-top: 2vh;
+			margin-left: 4vw;
+		}
+		.search{
+			margin-top: 0.5vh;
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.search-img{
+			margin-top: 2vh;
+		}
+		.search-img2 img{
+			width: 2vw;
+			height: 4vh;
+			border-radius: 50%;
+			margin-top: 2vh;
+			margin-left: 28vw;
+		}
+		.apps-row{
+			display: flex;
+		}
+		.apps-box{
+			width: 9vw;
+			height: 5vh;
+			background-color: seagreen;
+		}
+		.apps{
+			color: lightgrey;
+			margin-left: 3vw;
+			margin-top:1vh;
+		}
+		.categories-box{
+			width:8vw;
+			height: 5vh;
+			background-color: white;
+		}
+		.categories{
+			margin-top: 1vh;
+			margin-left: 1.5vw;
+			color: lightgrey;
+		}
+		.home-box{
+			width:6vw;
+			height: 5vh;
+			background-color: white;
+		}
+		.home{
+			margin-top: 1vh;
+			margin-left: 1.5vw;
+			color: black;
+		}
+		.topcharts-box{
+			width:8vw;
+			height: 5vh;
+			background-color: white;
+		}
+		.topcharts{
+			margin-top: 1vh;
+			margin-left: 1.5vw;
+			color: lightgrey;
+		}
+		.newrelease-box{
+			width:45vw;
+			height: 5vh;
+			background-color: white;
+		}
+		.newrelease{
+			margin-top: 1vh;
+			margin-left: 1.5vw;
+			color: lightgrey;
+		}
+		.white-box1{
+			width: 7vw;
+			height: 5vh;
+			background-color: white;
+		}
+		.grey-box1{
+			width: 1vw;
+			height: 2vh;
+			background-color: lightgrey;
+			border: 1px solid grey;
+			margin-top: 1.5vh;
+			border-radius: 10%;
+		}
+		.black-circle1{
+			width: 0.5vw;
+			height: 1vh;
+			border-radius: 50%;
+			background-color: black;
+			margin-top: 0.5vh;
+			margin-left: 0.2vw;
+		}
+		.white-box2{
+			width: 4vw;
+			height: 5vh;
+			background-color: white;
+		}
+		.grey-box2{
+			width: 2vw;
+			height: 2vh;
+			background-color: lightgrey;
+			border: 1px solid grey;
+			margin-top: 1.5vh;
+			border-radius: 10%;
+		}
+		.myapps-box{
+			background-color: darkgrey;
+			width: 10vw;
+			height: 10vh;
+		}
+		.myapps{
+			margin-left: 1vw;
+			color: lightgrey;
+		}
+		.shop{
+			margin-top: 1vh;
+			margin-left: 1vw;
+			color: seagreen;
+		}
+		.myapps-row{
+			display: flex;
+		}
+		.app-text{
+			margin-top: 2vh;
+			margin-left: 2vw;
+		}
+		.seemore-box{
+			width: 6vw;
+			height: 4vh;
+			background-color: seagreen;
+			margin-left: 57vw;
+			margin-top: 4vh;
+			border-radius: 10%;
+		}
+		.seemore{
+			color: white;
+			margin-left: 0.5;
+			text-align: center;
+			margin-top: 0.5vh;
+		}
+		.games-box{
+			background-color:darkgray;
+			width: 10vw;
+			height: 10vh;
+		}
+		.games{
+			margin-left: 1vw;
+			color: lightgrey;
+		}
+		.kids{
+			margin-left: 1vw;
+			color: lightgrey;
+		}
+		.editorchoice{
+			margin-left: 1vw;
+			color: lightgrey;
+		}
+		.games-row{
+			display: flex;
+		}
+		.game-img1 img{
+			width: 7vw;
+			height: 15vh;
+			margin-left: 1vw;
+		}
+		.account-box{
+            background-color: darkgrey;
+			width: 10vw;
+			height: 13vh;
+		}
+		.account{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.paymentmethods{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.mysubscriptions{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.redeem{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.account-row{
+			display: flex;
+		}
+		.accountwhite-box1{
+			width: 7vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1vw;
+		}
+		.accountwhitetext-box1{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.accountwhite-box2{
+			width: 7vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1vw;
+		}
+		.accountwhitetext-box2{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.accountwhite-box3{
+			width: 7.5vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1.3vw;
+		}
+		.accountwhitetext-box3{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.accountwhite-box4{
+			width: 7vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1vw;
+		}
+		.accountwhitetext-box4{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.accountwhite-box5{
+			width: 7.5vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1vw;
+		}
+		.accountwhitetext-box5{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.accountwhite-box6{
+			width: 7vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1vw;
+		}
+		.accountwhitetext-box6{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.accountwhite-box7{
+			width: 7.5vw;
+			height: 13vh;
+			background-color: white;
+			margin-left: 1vw;
+		}
+		.accountwhitetext-box7{
+            color: lightgrey;
+            font-size: 2vh;
+            margin-top: 5.5vh;
+            margin-left: 0.2vw;
+		}
+		.wishlist-box{
+			background-color: darkgrey;
+			width: 10vw;
+			height: 13vh;
+		}
+		.mywishlist{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.myplayactivity{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.parentguide{
+			margin-left: 0.5vw;
+			color: lightgrey;
+		}
+		.wishlist-row{
+			display: flex;
+		}
+		.wishlist-text{
+			margin-top: 1vh;
+			margin-left: 2vw;
+		}
+		.freshfeature{
+			color: darkgrey;
+		}
+		.seemore-box2{
+			width: 6vw;
+			height: 4vh;
+			background-color: seagreen;
+			margin-top: 2vh;
+			margin-left: 57vw;
+			border-radius: 10%;
+		}
+		.toonme-row{
+			display: flex;
+			margin-left: 10vw;
+		}
+		.toonme-img img{
+			width: 7vw;
+			height: 17vh;
+			margin-left: 1vw;
+		}
+		.toonme-row1{
+			display: flex;
+		}
+		.toonme-box1{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 11vw;
+		}
+		.toonme-text1{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.toonme-box2{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.toonme-text2{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.toonme-box3{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.toonme-text3{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.toonme-box4{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.toonme-text4{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.toonme-box5{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.toonme-text5{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.toonme-box6{
+			width: 7.2vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.4vw;
+		}
+		.toonme-text6{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.toonme-box7{
+			width: 7.2vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.toonme-text7{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.checkweather-row{
+			display: flex;
+		}
+		.checkweather{
+			margin-left: 11.5vw;
+		}
+		.seemore-box3{
+			width: 6vw;
+			height: 4vh;
+			margin-left: 60vw;
+			margin-top: 2vh;
+			border-radius: 10%;
+			background-color: seagreen;
+		}
+		.bike-row{
+			display: flex;
+			margin-left: 10vw;
+		}
+		.bike-img img{
+			width: 7vw;
+			height: 16vh;
+			margin-left: 1vw;
+		}
+		.bike-row1{
+			display: flex;
+		}
+		.bike-box1{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 11vw;
+		}
+		.bike-text1{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.bike-box2{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.bike-text2{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.bike-box3{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.bike-text3{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.bike-box4{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.bike-text4{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.bike-box5{
+			width: 7vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.bike-text5{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.bike-box6{
+			width: 7.2vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.4vw;
+		}
+		.bike-text6{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+		.bike-box7{
+			width: 7.2vw;
+			height: 7vh;
+			background-color: white;
+			margin-left: 1.2vw;
+		}
+		.bike-text7{
+			font-size: 2vh;
+			color: lightgrey;
+			margin-left: 0.5;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="googleplay-row">
+			<div class="googleplay-img">
+				<img src="C:\Users\user\Desktop\play store/logo.png">
+			</div>
+			<div class="search-box">
+				<div class="search">Search</div>
+			</div>
+			<div class="search-img">
+					<img src="C:\Users\user\Desktop\play store/search box.png">
+			</div>
+			<div class="search-img2">
+				<img src="C:\Users\user\Desktop\social media template/avatar3.png">
+			</div>
+		</div>
+		<div class="apps-row">
+			<div class="apps-box">
+				<div class="apps">Apps</div>
+			</div>
+			<div class="categories-box">
+				<div class="categories">Categories v</div>
+			</div>
+			<div class="home-box">
+				<div class="home">Home</div>
+			</div>
+			<div class="topcharts-box">
+				<div class="topcharts">Top Charts</div>
+			</div>
+			<div class="newrelease-box">
+				<div class="newrelease">New releases</div>
+			</div>
+			<div class="white-box1">
+			<div class="grey-box1">
+				<div class="black-circle1">
+				</div>
+			</div>
+		    </div>
+		    <div class="white-box2">
+			<div class="grey-box2">
+			</div>
+		    </div>
+		</div>
+		<div class="myapps-row">
+			<div class="myapps-box">
+			<div class="myapps">My apps</div>
+			<div class="shop">Shop</div>	
+			</div>
+			<div class="app-text">
+				<p>Recommended for you</p>
+			</div>
+			<div class="seemore-box">
+				<div class="seemore">See more</div>
+			</div>
+		</div>
+		<div class="games-row">
+			<div class="games-box">
+				<div class="games">Games</div>
+				<div class="kids">Kids</div>
+				<div class="editorchoice">Editor's choice</div>
+			</div>
+			<div class="game-img1">
+				<img src="C:\Users\user\Desktop\play store/img1.png">
+				<img src="C:\Users\user\Desktop\play store/img2.png">
+				<img src="C:\Users\user\Desktop\play store/img3.png">
+				<img src="C:\Users\user\Desktop\play store/img4.png">
+				<img src="C:\Users\user\Desktop\play store/img5.png">
+				<img src="C:\Users\user\Desktop\play store/img6.png">
+				<img src="C:\Users\user\Desktop\play store/img7.png">
+			</div>
+		</div>
+		<div class="account-row">
+			<div class="account-box">
+				<div class="account">Account</div>
+				<div class="paymentmethods">Payment methods</div>
+				<div class="mysubscriptions">My subscriptions</div>
+				<div class="redeem">Redeem</div>
+			</div>
+			<div class="accountwhite-box1">
+				<div class="accountwhitetext-box1">
+					<p>Glitter dress color
+						<br/>
+						Baram games
+					</p>
+				</div>
+			</div>
+			<div class="accountwhite-box2">
+				<div class="accountwhitetext-box2">
+					<p>Stack Ball-Blast
+						<br/>
+						Casual Azar
+					</p>
+				</div>
+			</div>
+			<div class="accountwhite-box3">
+				<div class="accountwhitetext-box3">
+					<p>Ice Cream Inc
+						<br/>
+						TapNation
+					</p>
+				</div>
+			</div>
+			<div class="accountwhite-box4">
+				<div class="accountwhitetext-box4">
+					<p>Temple Run
+						<br/>
+						Imangi studios
+					</p>
+				</div>
+			</div>
+			<div class="accountwhite-box5">
+				<div class="accountwhitetext-box5">
+					<p>Sand Balls-Puzzle
+						<br/>
+						SayGames
+					</p>
+				</div>
+			</div>
+			<div class="accountwhite-box6">
+				<div class="accountwhitetext-box6">
+					<p>Crayola NailParty
+						<br/>
+						Budge studio
+					</p>
+				</div>
+			</div>
+			<div class="accountwhite-box7">
+				<div class="accountwhitetext-box7">
+					<p>Coloring gam
+						<br/>
+						RV studio
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="wishlist-row">
+			<div class="wishlist-box">
+				<div class="mywishlist">My wishlist</div>
+				<div class="myplayactivity">My Play Activity</div>
+				<div class="parentguide">Parent Guide</div>
+			</div>
+			<div class="wishlist-text">
+				<p><h3>Just updated</h3></p>
+				<div class="freshfeature">
+					<p>Fresh features&content</p>
+				</div>
+			</div>
+			<div class="seemore-box2">
+				<div class="seemore">See more</div>
+			</div>
+		</div>
+		<div class="toonme-row">
+			<div class="toonme-img">
+			<img src="C:\Users\user\Desktop\play store/img8.png">
+			<img src="C:\Users\user\Desktop\play store/img7.png">
+			<img src="C:\Users\user\Desktop\play store/img9.png">
+			<img src="C:\Users\user\Desktop\play store/img10.png">
+			<img src="C:\Users\user\Desktop\play store/img11.png">
+			<img src="C:\Users\user\Desktop\play store/img12.png">
+			<img src="C:\Users\user\Desktop\play store/img13.png">
+		    </div>
+		</div>
+		<div class="toonme-row1">
+			<div class="toonme-box1">
+				<div class="toonme-text1">
+					<p>ToonMe-Cartoon
+						<br/>
+						Linrrock-invest
+					</p>
+				</div>
+			</div>
+			<div class="toonme-box2">
+				<div class="toonme-text2">
+					<p>Coloring-Game
+						<br/>
+						RV-studio
+					</p>
+				</div>
+			</div>
+			<div class="toonme-box3">
+				<div class="toonme-text3">
+					<p>Mimo Learn to
+						<br/>
+						mimo hello
+					</p>
+				</div>
+			</div>
+			<div class="toonme-box4">
+				<div class="toonme-text4">
+					<p>EWA learn Eng
+						<br/>
+						Uthim learn
+					</p>
+				</div>
+			</div>
+			<div class="toonme-box5">
+				<div class="toonme-text5">
+					<p>Photo Editor with
+						<br/>
+						video shoot
+					</p>
+				</div>
+			</div>
+			<div class="toonme-box6">
+				<div class="toonme-text6">
+					<p>Fot Mob Soccer
+						<br/>
+						Nor Apps AS
+					</p>
+				</div>
+			</div>
+			<div class="toonme-box7">
+				<div class="toonme-text7">
+					<p>Abblo make friend
+						<br/>
+						MassesVeda
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="checkweather-row">
+			<div class="checkweather"><h3>Check Weather</h3></div>
+			<div class="seemore-box3">
+				<div class="seemore">See more</div>
+			</div>
+		</div>
+		<div class="bike-row">
+			<div class="bike-img">
+				<img src="C:\Users\user\Desktop\play store/img14.png">
+				<img src="C:\Users\user\Desktop\play store/img15.png">
+				<img src="C:\Users\user\Desktop\play store/img16.png">
+				<img src="C:\Users\user\Desktop\play store/img17.png">
+				<img src="C:\Users\user\Desktop\play store/img18.png">
+				<img src="C:\Users\user\Desktop\play store/img19.png">
+				<img src="C:\Users\user\Desktop\play store/img20.png">
+			</div>
+		</div>
+			<div class="bike-row1">
+			<div class="bike-box1">
+				<div class="bike-text1">
+					<p>Bike Stunt 3D
+						<br/>
+						Jockey Games
+					</p>
+				</div>
+			</div>
+			<div class="bike-box2">
+				<div class="bike-text2">
+					<p>Wild animal Hunt
+						<br/>
+						Game Fianle
+					</p>
+				</div>
+			</div>
+			<div class="bike-box3">
+				<div class="bike-text3">
+					<p>Wild animal Hund
+						<br/>
+						Games Cloud
+					</p>
+				</div>
+			</div>
+			<div class="bike-box4">
+				<div class="bike-text4">
+					<p>US Tractor Driving
+						<br/>
+						Play street
+					</p>
+				</div>
+			</div>
+			<div class="bike-box5">
+				<div class="bike-text5">
+					<p>Spider Rope Hero
+						<br/>
+						Zimmy games
+					</p>
+				</div>
+			</div>
+			<div class="bike-box6">
+				<div class="bike-text6">
+					<p>Crazy car Transport
+						<br/>
+						Play zee
+					</p>
+				</div>
+			</div>
+			<div class="bike-box7">
+				<div class="bike-text7">
+					<p>Grand Ganster
+						<br/>
+						Play zee
+					</p>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
